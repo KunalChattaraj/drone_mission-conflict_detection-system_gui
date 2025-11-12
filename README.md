@@ -11,14 +11,11 @@ This project provides a friendly desktop UI to load drone mission files (waypoin
 - [Features](#features)  
 - [Demo / Screenshots](#demo--screenshots)  
 - [Installation](#installation)  
-- [Usage](#usage)  
-- [Configuration](#configuration)  
+- [Usage](#usage)   
 - [File formats / Inputs](#file-formats--inputs)  
 - [Output / Reports](#output--reports)  
 - [Troubleshooting](#troubleshooting)  
 - [Development & Contributing](#development--contributing)  
-- [License](#license)  
-- [Credits](#credits)
 
 ---
 
