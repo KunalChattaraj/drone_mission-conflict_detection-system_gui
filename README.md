@@ -48,8 +48,13 @@ Repository: `KunalChattaraj/drone_mission-conflict_detection-system_gui`.
 
 ## Demo / Screenshots
 
-<!-- REPLACE: add actual screenshots or GIFs from your GUI. Example: -->
-> Example screenshot or short GIF goes here — show mission overlay, detected conflict markers and an exported report.
+Here’s an example of the Drone Mission Conflict Detection System GUI in action:
+
+<p align="center">
+  <img src="Screenshot 2025-11-12 213546.png" alt="Drone Mission Conflict Detection GUI" width="800"/>
+</p>
+
+The GUI provides controls for mission generation, conflict checking, mission management, and displays system statistics and conflict results in real-time.
 
 ---
 
