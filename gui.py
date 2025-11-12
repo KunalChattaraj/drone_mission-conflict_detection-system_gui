@@ -644,7 +644,7 @@ class DCSGUI:
         status_frame = ttk.LabelFrame(main_frame, text="System Status", padding="10")
         status_frame.grid(row=2, column=0, columnspan=4, sticky=(tk.W, tk.E), pady=(0, 10))
         
-        self.status_text = tk.Text(status_frame, height=4, width=100)
+        self.status_text = tk.Text(status_frame, height=2, width=100)
         self.status_text.grid(row=0, column=0, sticky=(tk.W, tk.E))
         
         # Conflict detection frame
@@ -668,7 +668,7 @@ class DCSGUI:
         
         # Treeview for conflicted missions
         columns = ("Mission ID", "Start Time", "Duration", "Status", "Last Status Update", "Action")
-        self.conflict_tree = ttk.Treeview(results_frame, columns=columns, show="headings", height=10)
+        self.conflict_tree = ttk.Treeview(results_frame, columns=columns, show="headings", height=5)
         
         for col in columns:
             self.conflict_tree.heading(col, text=col)
@@ -705,8 +705,8 @@ class DCSGUI:
         self.conflict_tree.bind('<<TreeviewSelect>>', self.on_selection_change)
         
         # Statistics frame
-        stats_frame = ttk.LabelFrame(main_frame, text="System Statistics", padding="10")
-        stats_frame.grid(row=5, column=0, columnspan=4, sticky=(tk.W, tk.E), pady=(0, 10))
+        stats_frame = ttk.LabelFrame(main_frame, text="System Statistics", padding="2")
+        stats_frame.grid(row=5, column=0, columnspan=4, sticky=(tk.W, tk.E), pady=(0, 2))
         
         self.stats_text = tk.Text(stats_frame, height=4, width=100)
         self.stats_text.grid(row=0, column=0, sticky=(tk.W, tk.E))
