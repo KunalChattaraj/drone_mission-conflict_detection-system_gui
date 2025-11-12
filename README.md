@@ -130,7 +130,7 @@ mission_a,mission_b,conflict_type,start_time,end_time,severity,distance_m,notes
 
 - GUI doesn't start: ensure you're using Python 3.8+ and required GUI libraries are installed.  
 - Missing dependency errors: install via `pip install <missing>` 
-- Unexpected mission format: verify CSV/JSON headers and timestamps are in UTC and consistent.
+- Unexpected mission format: verify CSV headers and timestamps are in UTC and consistent.
 
 ---
 
@@ -158,10 +158,6 @@ Suggested workflow:
 
 ## Contributors
 
-- Original author: KunalChattaraj
+- Original author: Kunal Chattaraj
 
 ---
-
-## License
-
-This project is available under the [MIT License](LICENSE).
