@@ -103,20 +103,6 @@ Basic workflow:
 
 ---
 
-## Configuration
-
-You can configure detection thresholds and settings (example structure):
-
-```yaml
-# config.yml (example)
-spatial_tolerance_m: 10
-temporal_overlap_s: 30
-report_format: csv
-map_projection: "EPSG:4326"
-```
-
----
-
 ## File formats / Inputs
 
 Supported input mission formats (customize as needed):
@@ -140,22 +126,10 @@ mission_a,mission_b,conflict_type,start_time,end_time,severity,distance_m,notes
 
 ---
 
-## Internals (how detection typically works)
-
-High-level algorithm (replace with exact details from your code):
-
-1. Parse mission waypoints into time-tagged segments.  
-2. Project geographic coordinates into a planar CRS (if needed) for accurate distance calculations.  
-3. For each pair of missions, do segment-segment proximity checks (e.g., using `shapely`) and time overlap checks.  
-4. Flag conflicts when spatial distance < threshold AND temporal overlap > threshold.  
-5. Assign severity based on distance, altitude difference, and duration of overlap.
-
----
-
 ## Troubleshooting
 
 - GUI doesn't start: ensure you're using Python 3.8+ and required GUI libraries are installed.  
-- Missing dependency errors: install via `pip install <missing>` or `pip install -r requirements.txt`.  
+- Missing dependency errors: install via `pip install <missing>` 
 - Unexpected mission format: verify CSV/JSON headers and timestamps are in UTC and consistent.
 
 ---
