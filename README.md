@@ -3,8 +3,6 @@
 A graphical user interface for detecting conflicts between planned drone missions.  
 This project provides a friendly desktop UI to load drone mission files (waypoints / flight plans), visualize missions, detect potential conflicts (spatial/temporal overlaps), and export conflict reports.
 
-> ⚠️ Draft note: I created this README from the repository name and common expectations for a GUI conflict-detection tool. Replace the placeholders (marked `<!-- REPLACE -->`) with exact repo-specific details (commands, dependency versions, screenshots) when available.
-
 ---
 
 ## Table of contents
@@ -31,7 +29,7 @@ This project provides a friendly desktop UI to load drone mission files (waypoin
 - Detect spatial (path) intersections between missions.  
 - Detect temporal overlap where multiple drones occupy the same airspace at conflicting times.  
 - Visualize missions on an interactive map or simple XY plot and review conflict severity.  
-- Export conflict reports (CSV / JSON) for logging and post-processing.
+- Export conflict reports (CSV) for logging and post-processing.
 
 Repository: `KunalChattaraj/drone_mission-conflict_detection-system_gui`.
 
@@ -43,7 +41,7 @@ Repository: `KunalChattaraj/drone_mission-conflict_detection-system_gui`.
 - Visual map / plot visualization of missions and waypoints.  
 - Automatic conflict detection (spatial and temporal heuristics).  
 - Highlight conflicts by severity (critical / high / moderate / safe).  
-- Export conflict report as CSV or JSON.  
+- Export conflict report as CSV.  
 - Simple, lightweight desktop GUI (single Python script `gui.py` included in repo).
 
 ---
@@ -73,15 +71,10 @@ Install dependencies (example). Replace with exact requirements from your projec
 
 ```bash
 pip install --upgrade pip
-pip install -r requirements.txt
 ```
-
-If you don't have a `requirements.txt`, common dependencies for a GUI + geospatial conflict detector might include:
 
 ```bash
 pip install numpy pandas shapely matplotlib pyproj
-# plus whichever GUI lib is used; common choices:
-# pip install pyqt5       # for Qt
 # pip install tk         # tkinter usually comes with Python
 ```
 
@@ -123,9 +116,7 @@ map_projection: "EPSG:4326"
 
 Supported input mission formats (customize as needed):
 
-- CSV with columns: `mission_id, waypoint_id, lat, lon, alt, time`  
-- JSON mission objects (array of waypoints with lat/lon/alt/time)  
-- MAVLink / QGroundControl mission exports (if implemented)
+- CSV with columns: `mission_id, waypoint_id, lat, lon, alt, time`   
 
 ---
 
@@ -134,7 +125,6 @@ Supported input mission formats (customize as needed):
 Exported report types:
 
 - CSV: list of conflict records with fields `mission_a`, `mission_b`, `conflict_type`, `start_time`, `end_time`, `severity`, `notes`.  
-- JSON: structured conflict objects for programmatic use.  
 - Visual overlay export (e.g., PNG snapshot) of the map with conflicts.
 
 Example CSV header:
@@ -182,10 +172,6 @@ Suggested workflow:
 
 ```
 ├── gui.py
-├── detector.py
-├── utils.py
-├── requirements.txt
-├── sample_missions/
 └── README.md
 ```
 
